@@ -198,7 +198,7 @@ if (CMAKE_INSTALL_PREFIX)
     ARCHIVE DESTINATION "${INSTALL_LIB_DIR}"
     LIBRARY DESTINATION "${INSTALL_LIB_DIR}"
   )
-  if (NOT BUILD_MODULE)
+  if (BUILD_MODULE)
     if(UNIX)
       set(prefix ${CMAKE_INSTALL_PREFIX})
       set(includedir ${INSTALL_INC_DIR})
@@ -211,5 +211,5 @@ if (CMAKE_INSTALL_PREFIX)
       FILES src/luv.h src/util.h src/lhandle.h src/lreq.h
       DESTINATION "${INSTALL_INC_DIR}"
     )
-  endif (NOT BUILD_MODULE)
+  endif (BUILD_MODULE)
 endif (CMAKE_INSTALL_PREFIX)
